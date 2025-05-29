@@ -3,7 +3,7 @@ import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 import HomeHero from "@/components/HomeHero.astro";
 import { getListPage, getSinglePage } from "@/lib/contentParser.astro";
-import { slugSelector, supportedLang } from "@/lib/utils/languageParser";
+import { supportedLang } from "@/lib/utils/languageParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
@@ -45,7 +45,7 @@ const { default_language } = config.settings;
 
   <!-- Features -->
   {
-    features.map((feature: Feature, index: number) => (
+    features.map((feature, index: number) => (
       <section class={`section-sm ${index % 2 === 0 && "bg-gradient"}`}>
         <div class="container">
           <div class="row items-center justify-between">
@@ -64,7 +64,7 @@ const { default_language } = config.settings;
               <h2 set:html={markdownify(feature.title)} class="mb-4" />
               <p set:html={markdownify(feature.content)} class="mb-8 text-lg" />
               <ul>
-                {feature.bulletpoints.map((bullet: string) => (
+                {feature.bulletpoints?.map((bullet: string) => (
                   <li class="relative mb-4 pl-6">
                     <FaCheck className={"absolute left-0 top-1.5"} />
                     <span set:html={markdownify(bullet)} />
