@@ -49,4 +49,8 @@ export default defineConfig({
     shikiConfig: { theme: "one-dark-pro", wrap: true },
     extendDefaultPlugins: true,
   },
+  server: {
+    port: 3001,
+    host: true
+  },
 });
