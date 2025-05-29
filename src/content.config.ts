@@ -78,6 +78,21 @@ const contactCollection = defineCollection({
 });
 
 // Homepage collection schema
+const buttonSchema = z.object({
+  enable: z.boolean(),
+  label: z.string(),
+  link: z.string(),
+  icon: z.string().optional(),
+});
+
+const featureItemSchema = z.object({
+  title: z.string(),
+  image: z.string(),
+  content: z.string(),
+  bulletpoints: z.array(z.string()).optional(),
+  button: buttonSchema,
+});
+
 const homepageCollection = defineCollection({
   loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/homepage" }),
   schema: z.object({
@@ -85,25 +100,16 @@ const homepageCollection = defineCollection({
       title: z.string(),
       content: z.string(),
       image: z.string(),
-      button: z.object({
-        enable: z.boolean(),
-        label: z.string(),
-        link: z.string(),
-      }),
+      button: buttonSchema,
     }),
-    features: z.array(
-      z.object({
+    features: z.array(featureItemSchema),
+    sections: z.object({
         title: z.string(),
         image: z.string(),
         content: z.string(),
-        bulletpoints: z.array(z.string()),
-        button: z.object({
-          enable: z.boolean(),
-          label: z.string(),
-          link: z.string(),
-        }),
-      }),
-    ),
+        features: z.array(featureItemSchema),
+        button: buttonSchema,
+      }).optional(),
   }),
 });
 
@@ -118,11 +124,7 @@ const ctaSectionCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     image: z.string(),
-    button: z.object({
-      enable: z.boolean(),
-      label: z.string(),
-      link: z.string(),
-    }),
+    button: buttonSchema,
   }),
 });
 

@@ -1,7 +1,7 @@
 import type { ContentEntryMap } from "astro:content";
 
 export type Feature = {
-  button: button;
+  button: Button;
   image: string;
   bulletpoints: string[];
   content: string;
@@ -12,4 +12,5 @@ export type Button = {
   enable: boolean;
   label: string;
   link: string;
+  icon?: string;
 };
