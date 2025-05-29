@@ -13,3 +13,7 @@
 .btn-outline-primary {
   @apply border-dark text-text-dark hover:bg-dark dark:hover:text-text-dark bg-transparent hover:text-white dark:border-darkmode-primary dark:text-white dark:hover:bg-darkmode-primary;
 }
+
+.btn-color-gray {
+  @apply border-white text-light hover:bg-slate-500/30
+}

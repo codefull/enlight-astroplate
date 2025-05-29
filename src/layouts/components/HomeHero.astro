@@ -1,0 +1,38 @@
+---
+import { slugSelector } from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+import config from "@/config/config.json";
+
+const { default_language } = config.settings;
+const { banner } = Astro.props;
+const { lang } = Astro.params;
+---
+<section class={`relative md:min-h-[90vh] flex items-center justify-center verflow-hidden bg-[url(${banner.image})] bg-cover bg-origin-content bg-fixed bg-no-repeat`}>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container relative z-10">
+      <div class="row justify-center">
+        <div class="lg:col-7 md:col-9  max-w-4xl mx-auto mt-10 mb-10 text-center">
+          <h1
+            set:html={markdownify(banner.title)}
+            class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in text-white"
+          />
+          <p set:html={markdownify(banner.content)} 
+          class="text-xl md:text-2xl mb-10 text-accent-100 max-w-3xl mx-auto animate-slide-up text-white" />
+          {
+            banner.button.enable && (
+              <a
+                class="btn btn-outline-primary rounded-full btn-color-gray"
+                href={ slugSelector(banner.button.link, lang || default_language) }
+                target={
+                  banner.button.link.startsWith("http") ? "_blank" : "_self"
+                }
+                rel="noopener"
+              >
+                {banner.button.label}
+              </a>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>

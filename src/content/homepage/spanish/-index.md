@@ -1,13 +1,13 @@
 ---
 # Banner
 banner:
-  title: "La Plantilla de Inicio Definitiva Que Necesitas Para Empezar Tu Proyecto Astro"
-  content: "Astroplate es una plantilla de inicio gratuita construida con Astro y TailwindCSS, que te proporciona todo lo necesario para arrancar tu proyecto Astro y ahorrar un tiempo valioso."
+  title: "Llevando la Luz del Evangelio a las Naciones"
+  content: "Yo, El Señor, te he llamado en justicia, y te sostendré de la mano; te guardaré y te pondré como convenio para el pueblo, como luz para las naciones, para que abras los ojos de los ciegos, para que saques de la cárcel a los presos y de casas de prisión a los que moran en tinieblas. <span class=\"font-light text-base-sm\" >(Isaías 42:6)</span>"
   image: "/images/banner.png"
   button:
     enable: true
-    label: "Empezar Gratis"
-    link: "https://github.com/zeon-studio/astroplate"
+    label: "Quienes somos"
+    link: "/about"
 
 # Features
 features:
