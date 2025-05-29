@@ -1,15 +1,15 @@
 {
   "site": {
-    "title": "Astroplate",
+    "title": "Luz a las Naciones",
     "base_url": "https://astroplate.netlify.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_darkmode": "/images/logo-darkmode.png",
-    "logo_width": "150",
-    "logo_height": "30",
-    "logo_text": "Astroplate"
+    "logo_width": "190",
+    "logo_height": "38",
+    "logo_text": "Red Global de Ministerios Luz a las Naciones"
   },
 
   "settings": {
@@ -20,7 +20,7 @@
     "pagination": 2,
     "summary_length": 200,
     "blog_folder": "blog",
-    "default_language": "en",
+    "default_language": "es",
     "disable_languages": ["fr"],
     "default_language_in_subdir": false
   },
