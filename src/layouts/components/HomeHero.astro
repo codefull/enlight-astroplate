@@ -7,7 +7,10 @@ const { default_language } = config.settings;
 const { banner } = Astro.props;
 const { lang } = Astro.params;
 ---
-<section class={`relative md:min-h-[90vh] flex items-center justify-center verflow-hidden bg-[url(${banner.image})] bg-cover bg-origin-content bg-fixed bg-no-repeat`}>
+
+<section 
+  class={`relative md:min-h-[90vh] flex items-center justify-center overflow-hidden bg-cover bg-origin-content bg-fixed bg-no-repeat`}
+  style={`background-image: url(${banner.image});`}>
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="container relative z-10">
       <div class="row justify-center">

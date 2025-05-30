@@ -3,7 +3,7 @@
 banner:
   title: "Bringing the Light of the Gospel to the Nations"
   content: "I the LORD have called thee in righteousness, and will hold thine hand, and will keep thee, and give thee for a covenant of the people, for a light of the Gentiles. <span class=\"font-light text-base-sm\" >(Isaiah 42:6)</span>"
-  image: "/images/banner.png"
+  image: "/images/banner.jpg"
   button:
     enable: true
     label: "About Us"

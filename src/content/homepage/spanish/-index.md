@@ -3,7 +3,7 @@
 banner:
   title: "Llevando la Luz del Evangelio a las Naciones"
   content: "Yo, El Señor, te he llamado en justicia, y te sostendré de la mano; te guardaré y te pondré como convenio para el pueblo, como luz para las naciones, para que abras los ojos de los ciegos, para que saques de la cárcel a los presos y de casas de prisión a los que moran en tinieblas. <span class=\"font-light text-base-sm\" >(Isaías 42:6)</span>"
-  image: "/images/banner.png"
+  image: "/images/banner.jpg"
   button:
     enable: true
     label: "Quienes somos"
